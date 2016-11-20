@@ -7,9 +7,11 @@ No 3rd party libraries were allowed. The only 3rd party library used in this pro
 
 The pieces in the slide puzzle all had to be drawn on one view. Meaning the animations for the sliding is done manually frame by frame.
 
-A paper written for this project can be read [here](https://silverfox.be/files/isolation-paper.pdf) with a full explanation.
+A paper written for this project can be found [here](https://silverfox.be/files/isolation-paper.pdf).
 
+![](readme-resources/isolation-game-lose.gif)
 
+*In normal mode, the assignment image is cut in 9 tiles and the upper right tile is removed. As the timer nears 0, the assignment will start to blur.*
 
 ## PuzzleGameLibrary
 PuzzleGameLibrary is a comprehensive library for bitmap loading and manipulation which does the heavy lifting for this project. It supports the following operations:
