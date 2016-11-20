@@ -1,7 +1,7 @@
 ![](splash.png)
 
 ## About
-Isolation is a slide puzzle game developed in WPF as a school assignment. The main purpose of the assignment was to get familiar with low level bitmap manipulations, as well as generating guassian blurs.
+Isolation is a slide puzzle game developed in WPF as a school assignment. The main purpose of the assignment was to get familiar with low level bitmap manipulations, as well as generating gaussian blurs.
 
 No 3rd party libraries were allowed. The only 3rd party library used in this project is [AvCapWPF](https://github.com/sam-lippert/AvCapWpf) for webcam support.
 
@@ -22,7 +22,7 @@ PuzzleGameLibrary is a comprehensive library for bitmap loading and manipulation
 * Invert
 * Greyscale
 * Sepia
-* Guassian blur
+* Gaussian blur
 * Fast gaussian blur (using two motion blurs)
 * Horizontal motion blur
 * Vertical motion blur
