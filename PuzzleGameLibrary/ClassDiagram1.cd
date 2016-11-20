@@ -1,0 +1,117 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PuzzleGameLibrary.Functions.BounceFunction">
+    <Position X="15" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Functions\BounceFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PuzzleGameLibrary.Functions.EaseInFunction">
+    <Position X="15" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Functions\EaseInFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PuzzleGameLibrary.Functions.EaseInOutFunction">
+    <Position X="16.75" Y="4.25" Width="1.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Functions\EaseInOutFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PuzzleGameLibrary.Functions.EaseOutFunction">
+    <Position X="16.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Functions\EaseOutFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PuzzleGameLibrary.Functions.LinearFunction">
+    <Position X="13.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Functions\LinearFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PuzzleGameLibrary.Functions.SmallBounceFunction">
+    <Position X="13.25" Y="4.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>Functions\SmallBounceFunction.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PuzzleGameLibrary.GameBoard" Collapsed="true">
+    <Position X="6" Y="0.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>gMEAiAURjXEAAiWUgiAUBkGBEgLSCwCpQCEgQEhQArA=</HashCode>
+      <FileName>Model\GameBoard.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="PuzzleGameLibrary.Helpers.BenchmarkTimer" Collapsed="true">
+    <Position X="14.75" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAIAAAAAADAAAAAAACAAAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>Helpers\BenchmarkTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PuzzleGameLibrary.Helpers.GaussianBlurHelper">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAIAAAAAAAQAACAAAACAgAAAABAAAEAAABQAgCAAIA=</HashCode>
+      <FileName>Helpers\GaussianBlurHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PuzzleGameLibrary.Helpers.ImageStreamHelper" Collapsed="true">
+    <Position X="10.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAEAAIAABIJAAAAAIAAAAAAABAAAAAAAAAA=</HashCode>
+      <FileName>Helpers\ImageStreamHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PuzzleGameLibrary.Helpers.IntegerHelper" Collapsed="true">
+    <Position X="14" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>Helpers\IntegerHelper.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PuzzleGameLibrary.Model.ARGBBitmapArray">
+    <Position X="2.5" Y="0.5" Width="3.25" />
+    <TypeIdentifier>
+      <HashCode>CAAAAhABBQCwAAGAAgAAwECoEhAAIkSAAIIAAUAQAUA=</HashCode>
+      <FileName>Model\ARGBBitmapArray.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PuzzleGameLibrary.Model.ARGBPixel" Collapsed="true">
+    <Position X="0.5" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAABAAAACAAAAAAAA=</HashCode>
+      <FileName>Model\ARGBPixel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PuzzleGameLibrary.Model.Pixel" Collapsed="true">
+    <Position X="0.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Pixel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PuzzleGameLibrary.Model.RGBPixel" Collapsed="true">
+    <Position X="0.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAACAQAAAgAAAgAAAAAAAAAAAAAAAAgAAAgAAhAAAAA=</HashCode>
+      <FileName>Model\RGBPixel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Enum Name="PuzzleGameLibrary.Model.Functions">
+    <Position X="11.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAAAAgAAAAAABBAAAAAAAAAABAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Model\Functions.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

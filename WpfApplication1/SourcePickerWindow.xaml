@@ -1,0 +1,57 @@
+﻿<Window x:Class="PuzzleGame.SourcePickerWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="icon.ico"
+        Title="Isolation" Height="546" Width="669" WindowStyle="None" AllowsTransparency="True" Closing="Window_Closing" WindowStartupLocation="CenterScreen" MinWidth="640" MinHeight="480" Padding="100" Background="#00000000" ResizeMode="CanMinimize" SizeChanged="Window_SizeChanged" Margin="100" MouseDown="Window_MouseDown">
+
+    <Window.Resources>
+        <ImageBrush x:Key="File" ImageSource="Resources/pick_file_btn.png" />
+        <ImageBrush x:Key="TakePhoto" ImageSource="Resources/take_photo_btn.png" />
+        <ImageBrush x:Key="Fullscreen" ImageSource="Resources/fullscreen_btn.png" />
+    </Window.Resources>
+    
+    <Grid>
+
+        <Grid x:Name="bgGrid" Margin="5,5,5,5" MouseDown="bgGrid_MouseDown">
+            <Grid.Background>
+                <ImageBrush ImageSource="Resources/bg_wood.jpg" TileMode="Tile" ViewportUnits="Absolute" Viewport="0,0,1680,1050"/>
+            </Grid.Background>
+        </Grid>
+
+
+        <Image HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="400" Source="Resources/new_game_title.png" IsHitTestVisible="False"/>
+
+        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Resources/corner_left_up.png" IsHitTestVisible="False"/>
+
+        <Image HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Source="Resources/corner_right_up.png" IsHitTestVisible="False"/>
+
+        <Image HorizontalAlignment="Right" Height="200" VerticalAlignment="Bottom" Width="250" Source="Resources/corner_right_bottom.png" IsHitTestVisible="False"/>
+
+        <Image HorizontalAlignment="Left" Height="200" VerticalAlignment="Bottom" Width="250" Source="Resources/corner_Left_bottom.png" IsHitTestVisible="False"/>
+
+        <Button x:Name="fullscreenBtn" Style="{StaticResource CustomButton}" Margin="0,0,0,10" Height="25" Width="100" VerticalAlignment="Bottom" Click="fullscreenBtn_Click" Cursor="Hand" PreviewMouseDown="fullscreenBtn_PreviewMouseDown" PreviewMouseUp="fullscreenBtn_PreviewMouseUp">
+            <Button.Background>
+                <DynamicResource ResourceKey="Fullscreen"/>
+            </Button.Background>
+        </Button>
+
+        <Grid Margin="0,0,0,10" Height="253" Width="400" VerticalAlignment="Center" >
+
+            <Button x:Name="fileSourceBtn" Style="{StaticResource CustomButton}" Height="200" Width="157" VerticalAlignment="Center" Click="fileSourceBtn_Click" Cursor="Hand" HorizontalAlignment="Left" PreviewMouseDown="fileSourceBtn_PreviewMouseDown" PreviewMouseUp="fileSourceBtn_PreviewMouseUp">
+                <Button.Background>
+                    <DynamicResource ResourceKey="File"/>
+                </Button.Background>
+            </Button>
+
+            <Button x:Name="cameraSourceBtn" Style="{StaticResource CustomButton}"  Height="200" Width="157" VerticalAlignment="Center" Click="cameraSourceBtn_Click" Cursor="Hand" HorizontalAlignment="Right" PreviewMouseDown="cameraSourceBtn_PreviewMouseDown" PreviewMouseUp="cameraSourceBtn_PreviewMouseUp">
+                <Button.Background>
+                    <DynamicResource ResourceKey="TakePhoto"/>
+                </Button.Background>
+            </Button>
+
+        </Grid>
+
+
+    </Grid>
+
+</Window>

@@ -1,0 +1,117 @@
+﻿<Window x:Class="WpfApplication1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:local="clr-namespace:PuzzleGame"
+        Loaded="WindowLoaded"
+        Icon="icon.ico"
+        Title="Isolation" Height="546" Width="669" WindowStyle="None" AllowsTransparency="True" WindowStartupLocation="CenterScreen" MinWidth="640" MinHeight="480" Padding="100" Background="#00000000" ResizeMode="CanMinimize" SizeChanged="Window_SizeChanged" Margin="100" MouseDown="Window_MouseDown" KeyDown="Window_KeyDown">
+
+    <Window.Resources>
+        <ImageBrush x:Key="Save" ImageSource="Resources/save_btn.png" />
+        <ImageBrush x:Key="New" ImageSource="Resources/new_game_btn.png" />
+        <ImageBrush x:Key="Quit" ImageSource="Resources/quit_btn.png" />
+        <ImageBrush x:Key="Retry" ImageSource="Resources/retry_btn.png" />
+        <ImageBrush x:Key="Fullscreen" ImageSource="Resources/fullscreen_btn.png" />
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid x:Name="bgGrid" Margin="5,5,5,5" MouseDown="bgGrid_MouseDown">
+            <Grid.Background>
+                <ImageBrush ImageSource="Resources/bg_wood.jpg" TileMode="Tile" ViewportUnits="Absolute" Viewport="0,0,1680,1050"/>
+            </Grid.Background>
+        </Grid>
+
+        <Grid Margin="5,5,200,5">
+            <Image x:Name="gameBoardSolutionImage" Margin="50,50,0,50" HorizontalAlignment="Center" Opacity="0"/>
+        </Grid>
+
+        <Grid Margin="5,5,200,5" IsHitTestVisible="False">
+            <Image x:Name="gameBoardShadowWithouthBordersImage" Margin="50,50,0,50" HorizontalAlignment="Center" Opacity="0"/>
+        </Grid>
+        
+        <Grid Margin="5,5,200,5">
+            <Image x:Name="gameBoardImage" Margin="50,50,0,50" MouseUp="gameBoardImage_MouseUp" Cursor="Hand" MouseMove="gameBoardImage_MouseMove" HorizontalAlignment="Center" MouseDown="gameBoardImage_MouseDown"/>
+        </Grid>
+
+        <Grid Margin="5,5,200,5" IsHitTestVisible="False">
+            <Image x:Name="gameBoardShadowImage" Margin="50,50,0,50" HorizontalAlignment="Center"/>
+        </Grid>
+
+        <Grid x:Name="bordersGrid" Margin="5,5,145,5" MouseDown="bordersGrid_MouseDown">
+            <Grid.Background>
+                <ImageBrush ImageSource="Resources/bg_wood.jpg" TileMode="Tile" ViewportUnits="Absolute" Viewport="0,0,1680,1050"/>
+            </Grid.Background>
+        </Grid>
+
+        <Grid Margin="0,5,180,5" IsHitTestVisible="False" Width="8" HorizontalAlignment="Right">
+            <Grid.Background>
+                <ImageBrush ImageSource="Resources/gutter.png" TileMode="Tile" ViewportUnits="Absolute" Viewport="0,0,8,74"/>
+            </Grid.Background>
+        </Grid>
+
+
+        <Grid x:Name="sidebar" HorizontalAlignment="Right" Width="130" Margin="25,25,35,5">
+            <Grid Margin="0,10,0,10" VerticalAlignment="Top">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="300"/>
+                </Grid.RowDefinitions>
+                <Image HorizontalAlignment="Left" Source="Resources/timer_bg.png" VerticalAlignment="Top"/>
+
+                <Viewbox Height="200" VerticalAlignment="Top">
+                    <ProgressBar x:Name="timerProgress" Style="{StaticResource ProgressBarStyle}" Width="200" Height="200" 
+                         Value="0" Background="#C6FFEBBD" BorderBrush="#FFBB7E43"/>
+                </Viewbox>
+                <Label x:Name="timerProgressLbl" Foreground="#FFFFEBBD" Content="0:00" FontWeight="Bold" FontSize="36" HorizontalAlignment="Center" VerticalAlignment="Top" Height="130" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" />
+                <Label x:Name="gameMessageLbl" Content="Game Over!" Height="40" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="22" HorizontalAlignment="Center" Foreground="#FFFFEBBD"/>
+
+                <Button x:Name="retryBtn" Style="{StaticResource CustomButton}" Content="" Margin="0, 200, 0, 0" Height="32" VerticalAlignment="Top" Cursor="Hand" Click="retryBtn_Click" PreviewMouseUp="retryBtn_PreviewMouseUp" PreviewMouseDown="retryBtn_PreviewMouseDown">
+                    <Button.Background>
+                        <DynamicResource ResourceKey="Retry"/>
+                    </Button.Background>
+                </Button>
+                
+            </Grid>
+
+            <Grid Margin="0,0,0,10" VerticalAlignment="Bottom">
+                <Button x:Name="saveBtn" Style="{StaticResource CustomButton}" Content="" Margin="0,0,0,120" Height="32" VerticalAlignment="Bottom" PreviewMouseDown="saveBtn_PreviewMouseDown" PreviewMouseUp="saveBtn_PreviewMouseUp" Click="saveBtn_Click" Cursor="Hand">
+                    <Button.Background>
+                        <DynamicResource ResourceKey="Save"/>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="newBtn" Style="{StaticResource CustomButton}" Content="" Margin="0,0,0,80" Height="32" VerticalAlignment="Bottom" PreviewMouseDown="newBtn_PreviewMouseDown" PreviewMouseUp="newBtn_PreviewMouseUp" Click="newBtn_Click" Cursor="Hand">
+                    <Button.Background>
+                        <DynamicResource ResourceKey="New"/>
+                    </Button.Background>
+                </Button>
+
+                <Button x:Name="quitBtn" Style="{StaticResource CustomButton}" Content="" Margin="0,0,0,40" Height="32" VerticalAlignment="Bottom" PreviewMouseDown="quitBtn_PreviewMouseDown" PreviewMouseUp="quitBtn_PreviewMouseUp" Click="quitBtn_Click" Cursor="Hand">
+                    <Button.Background>
+                        <DynamicResource ResourceKey="Quit"/>
+                    </Button.Background>
+                </Button>
+            </Grid>
+
+        </Grid>
+
+        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Resources/corner_left_up.png" IsHitTestVisible="False"/>
+
+        <Image HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Source="Resources/corner_right_up.png" IsHitTestVisible="False"/>
+
+        <Image HorizontalAlignment="Right" Height="200" VerticalAlignment="Bottom" Width="250" Source="Resources/corner_right_bottom.png" IsHitTestVisible="False"/>
+
+        <Image HorizontalAlignment="Left" Height="200" VerticalAlignment="Bottom" Width="250" Source="Resources/corner_Left_bottom.png" IsHitTestVisible="False"/>
+
+        <Button x:Name="fullscreenBtn" Style="{StaticResource CustomButton}" Margin="0,0,0,10" Height="25" Width="100" VerticalAlignment="Bottom" Click="fullscreenBtn_Click" Cursor="Hand" PreviewMouseUp="fullscreenBtn_PreviewMouseUp" PreviewMouseDown="fullscreenBtn_PreviewMouseDown">
+            <Button.Background>
+                <DynamicResource ResourceKey="Fullscreen"/>
+            </Button.Background>
+        </Button>
+
+        <Grid x:Name="flashView" Background="White" Opacity="0" IsHitTestVisible="False"></Grid>
+
+    </Grid>
+
+
+</Window>

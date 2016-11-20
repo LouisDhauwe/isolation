@@ -1,0 +1,82 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{0AF7EDD6-FD02-459F-AFC0-E15C4058EB65}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PuzzleGameLibrary</RootNamespace>
+    <AssemblyName>PuzzleGameLibrary</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationCore" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows" />
+    <Reference Include="System.Xaml" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Model\SaveGame.cs" />
+    <Compile Include="Functions\BounceFunction.cs" />
+    <Compile Include="Functions\EaseInFunction.cs" />
+    <Compile Include="Functions\EaseInOutFunction.cs" />
+    <Compile Include="Functions\EaseOutFunction.cs" />
+    <Compile Include="Functions\LinearFunction.cs" />
+    <Compile Include="Functions\SmallBounceFunction.cs" />
+    <Compile Include="Helpers\ColorHelper.cs" />
+    <Compile Include="Model\GameBoard.cs" />
+    <Compile Include="Helpers\BenchmarkTimer.cs" />
+    <Compile Include="Helpers\GaussianBlurHelper.cs" />
+    <Compile Include="Helpers\ImageIOHelper.cs" />
+    <Compile Include="Helpers\ImageStreamHelper.cs" />
+    <Compile Include="Helpers\IntegerHelper.cs" />
+    <Compile Include="Model\ARGBBitmapArray.cs" />
+    <Compile Include="Model\ARGBBitmapArray.Filters.cs" />
+    <Compile Include="Model\ARGBPixel.cs" />
+    <Compile Include="Model\Functions.cs" />
+    <Compile Include="Data\GameModesData.cs" />
+    <Compile Include="Model\Pixel.cs" />
+    <Compile Include="Model\RectIndices.cs" />
+    <Compile Include="Model\RGBPixel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

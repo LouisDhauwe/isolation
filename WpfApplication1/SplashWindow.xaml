@@ -1,0 +1,8 @@
+﻿<Window x:Class="PuzzleGame.SplashWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="SplashWindow" Height="0" Width="0" Loaded="Window_Loaded" ResizeMode="NoResize" ShowInTaskbar="False" WindowStyle="None" Visibility="Visible" Background="Transparent" WindowStartupLocation="CenterScreen">
+    <Grid>
+        
+    </Grid>
+</Window>

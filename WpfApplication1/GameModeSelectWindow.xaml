@@ -1,0 +1,69 @@
+﻿<Window x:Class="PuzzleGame.GameModeSelectWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Icon="icon.ico"
+        Title="Isolation" Height="546" Width="669" WindowStyle="None" AllowsTransparency="True" Closing="Window_Closing" WindowStartupLocation="CenterScreen" MinWidth="640" MinHeight="480" Padding="100" Background="#00000000" ResizeMode="CanMinimize" SizeChanged="Window_SizeChanged" Margin="100" MouseDown="Window_MouseDown" Loaded="Window_Loaded">
+
+    <Window.Resources>
+        <ImageBrush x:Key="Easy" ImageSource="Resources/easy_btn.png" />
+        <ImageBrush x:Key="Normal" ImageSource="Resources/normal_btn.png" />
+        <ImageBrush x:Key="Hard" ImageSource="Resources/hard_btn.png" />
+        <ImageBrush x:Key="Fullscreen" ImageSource="Resources/fullscreen_btn.png" />
+    </Window.Resources>
+
+    <Grid>
+
+        <Grid x:Name="bgGrid" Margin="5,5,5,5" MouseDown="bgGrid_MouseDown">
+            <Grid.Background>
+                <ImageBrush ImageSource="Resources/bg_wood.jpg" TileMode="Tile" ViewportUnits="Absolute" Viewport="0,0,1680,1050"/>
+            </Grid.Background>
+        </Grid>
+
+        <Grid Margin="5,5,5,155">
+            <Image x:Name="gameBoardImage" Margin="0,0,0,0" Cursor="Hand" HorizontalAlignment="Center" IsHitTestVisible="False"/>
+        </Grid>
+
+        <Image HorizontalAlignment="Center" Height="100" VerticalAlignment="Top" Width="400" Source="Resources/game_modes_title.png" IsHitTestVisible="False"/>
+
+        <Image HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="Resources/corner_left_up.png" IsHitTestVisible="False"/>
+
+        <Image HorizontalAlignment="Right" Height="100" VerticalAlignment="Top" Width="100" Source="Resources/corner_right_up.png" IsHitTestVisible="False"/>
+
+        <Image HorizontalAlignment="Right" Height="200" VerticalAlignment="Bottom" Width="250" Source="Resources/corner_right_bottom.png" IsHitTestVisible="False"/>
+
+        <Image HorizontalAlignment="Left" Height="200" VerticalAlignment="Bottom" Width="250" Source="Resources/corner_Left_bottom.png" IsHitTestVisible="False"/>
+
+        <Button x:Name="fullscreenBtn" Style="{StaticResource CustomButton}" Margin="0,0,0,10" Height="25" Width="100" VerticalAlignment="Bottom" Click="fullscreenBtn_Click" Cursor="Hand" PreviewMouseDown="fullscreenBtn_PreviewMouseDown" PreviewMouseUp="fullscreenBtn_PreviewMouseUp">
+            <Button.Background>
+                <DynamicResource ResourceKey="Fullscreen"/>
+            </Button.Background>
+        </Button>
+
+        <Grid Margin="0,0,0,100" Height="50" Width="500" VerticalAlignment="Bottom" >
+
+            <Button x:Name="easyBtn" Style="{StaticResource CustomButton}" Height="37" Width="150" VerticalAlignment="Center" Click="easyBtn_Click" Cursor="Hand" HorizontalAlignment="Left" PreviewMouseUp="easyBtn_PreviewMouseUp" PreviewMouseDown="easyBtn_PreviewMouseDown">
+                <Button.Background>
+                    <DynamicResource ResourceKey="Easy"/>
+                </Button.Background>
+            </Button>
+
+            <Button x:Name="normalBtn" Style="{StaticResource CustomButton}" Height="37" Width="150" VerticalAlignment="Center" Cursor="Hand" HorizontalAlignment="Center" PreviewMouseUp="normalBtn_PreviewMouseUp" PreviewMouseDown="normalBtn_PreviewMouseDown" Click="normalBtn_Click">
+                <Button.Background>
+                    <DynamicResource ResourceKey="Normal"/>
+                </Button.Background>
+            </Button>
+
+            <Button x:Name="hardBtn" Style="{StaticResource CustomButton}" Height="37" Width="150" VerticalAlignment="Center" Cursor="Hand" HorizontalAlignment="Right" PreviewMouseUp="hardBtn_PreviewMouseUp" PreviewMouseDown="hardBtn_PreviewMouseDown" Click="hardBtn_Click">
+                <Button.Background>
+                    <DynamicResource ResourceKey="Hard"/>
+                </Button.Background>
+            </Button>
+
+        </Grid>
+
+        <Grid x:Name="flashView" Background="White" Opacity="0" IsHitTestVisible="False"></Grid>
+
+    </Grid>
+
+</Window>
+
