@@ -1,4 +1,6 @@
-![](splash.png)
+<p align="center" >
+  <img src="splash.png" alt="Isolation" title="Isolation">
+</p>
 
 ## About
 Isolation is a slide puzzle game developed in WPF as a school assignment. The main purpose of the assignment was to get familiar with low level bitmap manipulations, as well as generating gaussian blurs.
